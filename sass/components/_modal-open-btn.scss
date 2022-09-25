@@ -6,11 +6,8 @@
 
     color: var(--background-color);
     background-color: var(--accent-color);
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.9;
-    align-items: center;
-    letter-spacing: 0.06em;
+    @include font($fs: 16px, $lh: 30px, $ls: 0.06em);
+    text-align: center;
     border-radius: 4px;
     border: 1px solid #000000;
 

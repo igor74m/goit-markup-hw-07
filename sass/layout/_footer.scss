@@ -22,16 +22,13 @@
 
 .footer-list .maps-link {
     color: var(--background-color);
-    font-size: 14px;
-    line-height: 1.7;
-    letter-spacing: 0.03em;
+     @include font($fw: 400, $lh: 24px);
+  
 }
 
 .footer-list .menu-link {
     color: var(--footer-link-color);
-    font-size: 14px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
+    @include font($fw: 400, $lh: 24px);
     transition: color var(--transition-dur-and-funk);
 
 &:hover,
@@ -49,24 +46,17 @@
 .social-link-text {
     margin-bottom: 20px;
     color: var(--background-color);
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
+    @include font();
     text-transform: uppercase;
 }
 
 .social-list-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %align;
     gap: 10px;
 }
 
 .social-link-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %align;
     width: 44px;
     height: 44px;
     background-color: rgba(255, 255, 255, 0.1);
@@ -88,10 +78,7 @@
 .form-text {
     margin-bottom: 20px;
     color: var(--background-color);
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
+    @include font();
     text-transform: uppercase;
 }
 
@@ -106,9 +93,7 @@
     border-radius: 4px;
 
 &::placeholder {
-    font-size: 16px;
-    line-height: 1.25;
-    letter-spacing: 0.03em;
+    @include font($fs: 16px, $fw: 400, $lh: 20px, $ls: 0.03em);
         }
 }
 
@@ -117,7 +102,7 @@
 .footer-form-btn {
     display: inline-flex;
     align-items: center;
-    text-align: center;
+    justify-content: center;
     min-width: 200px;
     min-height: 50px;
     margin-left: 12px;
@@ -127,10 +112,7 @@
     background-color: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.9;
-    letter-spacing: 0.06em;
+    @include font(16px, 700, 30px, 0.06)
 }
 
 .footer-btn-icon {

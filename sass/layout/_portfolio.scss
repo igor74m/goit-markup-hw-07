@@ -20,13 +20,11 @@
 
     color: var(--title-text-color);
     background-color: var(--secondary-background-color);
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.6;
+    @include font($fs: 16px, $fw: 500, $lh: 26px,);
     text-align: center;
-    letter-spacing: 0.03em;
-    transition: color var(--transition-dur-and-funk), background-color var(--transition-dur-and-funk),
-        box-shadow var(--transition-dur-and-funk);
+    transition: color var(--transition-dur-and-funk),
+     background-color var(--transition-dur-and-funk),
+    box-shadow var(--transition-dur-and-funk);
 
 &:hover,
 &:focus {
@@ -102,16 +100,14 @@
 
     background-color: rgba(33, 150, 243, 0.9);
     color: var(--background-color);
-    font-size: 18px;
-    line-height: 1.56;
-    letter-spacing: 0.03em;
+    @include font($fs: 18px, $fw: 400, $lh: 28px);
     transform: translateY(101%);
     transition: transform var(--transition-dur-and-funk);
-}
 
-.card-link:hover .overlay,
-.card-link:focus .overlay {
+.card-link:hover &,
+.card-link:focus & {
     transform: translateY(0%);
+}
 }
 
 .container-card {
@@ -122,15 +118,10 @@
     margin-bottom: 4px;
 
     color: var(--title-text-color);
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
+    @include font($fs: 18px, $lh: 36px, $ls: 0.06em);
 }
 
 .card-item .text {
     color: var(--color);
-    font-size: 16px;
-    line-height: 1.9;
-    letter-spacing: 0.03em;
+    @include font($fs: 16px, $fw: 400, $lh: 30px, $ls: 0.03em);
 }

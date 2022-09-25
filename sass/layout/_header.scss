@@ -8,7 +8,7 @@
     align-items: center;
 }
 
-.menu-nav {
+.page-nav {
     display: flex;
     align-items: center;
 }
@@ -17,34 +17,34 @@
     color: #000000;
 }
 
-.menu-list {
+.menu {
     display: flex;
     margin-left: 93px;
 }
 
-.menu-list .item+.item {
+.menu .menu__item+.menu__item {
     margin-left: 50px;
 }
 
-.nav-link {
+.menu__link {
     display: inline-block;
     padding-top: 32px;
     padding-bottom: 32px;
     position: relative;
 
     color: var(--title-text-color);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+    @include font($fw: 500, $lh: 16px, $ls: 00.02em);
     transition: color var(--transition-dur-and-funk);
 
 &:hover,
 &:focus {
     color: var(--accent-color);
         }
+}
 
-&.current::after {
+.menu__link_current {
+    color: var(--accent-color);
+&::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -53,10 +53,6 @@
     background-color: var(--accent-color);
     bottom: 0;
     left: 0;
-                }
-}
-
-.link.current {
-    color: var(--accent-color);
+        }
 }
 
